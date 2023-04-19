@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class SupportingClass1 extends StatelessWidget {
   @override
@@ -20,9 +21,9 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Alignment', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Alignment', style: CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n A point within a rectangle \n \n Alignment(0,0,0.0) represents the center of the rectangle. The distance from -1.0 to =1.0 is the distance from one side of the rectangle to the other side of the rectangle. Therefore, 2.0 units horizontally (or vertically) is equivalent to the width (or height) of the rectangle.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n A point within a rectangle \n \n Alignment(0,0,0.0) represents the center of the rectangle. The distance from -1.0 to =1.0 is the distance from one side of the rectangle to the other side of the rectangle. Therefore, 2.0 units horizontally (or vertically) is equivalent to the width (or height) of the rectangle.', style : CustomTextStyle.subtitle,
 
                   ),
 
@@ -43,78 +44,9 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Border', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Border', style: CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n A border of a box, comprised of four sides: top, right, bottom, left. \n \n The sides are represented by BorderSide objects.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-
-                ListTile(
-
-                  title: Text(
-                    '\n BorderRadius', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n An immutable set of raddi for each corner of a rectangle. Used by BoxDecoration when the shape is a BoxShape rectangle.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-
-
-                ListTile(
-
-                  title: Text(
-                    '\n BorderSide', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-                ListTile(
-
-                  title: Text(
-                    '\n BoxBorder', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-                ListTile(
-
-                  title: Text(
-                    '\n BoxDecoration', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-                ListTile(
-
-                  title: Text(
-                    '\n BoxShadow', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-                ListTile(
-
-                  title: Text(
-                    '\n Color', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n A border of a box, comprised of four sides: top, right, bottom, left. \n \n The sides are represented by BorderSide objects.', style : CustomTextStyle.subtitle
 
                   ),
 
@@ -124,21 +56,9 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n CircleBorder', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n BorderRadius', style: CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-
-                ListTile(
-
-                  title: Text(
-                    '\n EdgeInsets', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n An immutable set of raddi for each corner of a rectangle. Used by BoxDecoration when the shape is a BoxShape rectangle.', style : CustomTextStyle.subtitle,
 
                   ),
 
@@ -149,9 +69,9 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Gradient', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n BorderSide', style: CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
 
                   ),
 
@@ -160,9 +80,65 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Shadow', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n BoxBorder', style:  CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+                ListTile(
+
+                  title: Text(
+                    '\n BoxDecoration', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+                  ),
+
+                ),
+
+                ListTile(
+
+                  title: Text(
+                    '\n BoxShadow', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+                ListTile(
+
+                  title: Text(
+                    '\n Color', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+
+                ListTile(
+
+                  title: Text(
+                    '\n CircleBorder', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+
+                ListTile(
+
+                  title: Text(
+                    '\n EdgeInsets', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style : CustomTextStyle.subtitle,
 
                   ),
 
@@ -173,9 +149,33 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n TextDecoration', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Gradient', style: CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+                ListTile(
+
+                  title: Text(
+                    '\n Shadow', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
+
+                  ),
+
+                ),
+
+
+
+                ListTile(
+
+                  title: Text(
+                    '\n TextDecoration', style:  CustomTextStyle.title,
+                  ),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
 
                   ),
 
@@ -185,9 +185,9 @@ class SupportingClass1 extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n TextStyle', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n TextStyle', style:  CustomTextStyle.title,
                   ),
-                  subtitle: Text('\n content will be available soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n content will be available soon.', style :  CustomTextStyle.subtitle,
 
                   ),
 

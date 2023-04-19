@@ -250,6 +250,8 @@ import '../../ui/views/widget_catalog/sub_views/styling/StylingWidgets.dart';
 import '../../ui/views/widget_catalog/sub_views/text/DefaultTextStyleWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/RichTextWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/TextWIdget.dart';
+import '../models/todo_list.dart';
+import '../providers/todo_providers.dart';
 
 
 
@@ -1464,7 +1466,7 @@ class Routes {
         );
       case RouteName.state_management_todos_example:
         return MaterialPageRoute(
-          builder: (context) =>Error404(),
+          builder: (context) => Error404(),
         );
 
       default:
