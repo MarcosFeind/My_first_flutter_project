@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class Error404 extends StatelessWidget {
   @override
@@ -18,8 +19,7 @@ class Error404 extends StatelessWidget {
             child: Column(
               children: [
                 ListTile(
-                  subtitle: Text('\n Page not found screen', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
+                  subtitle: Text('\n Page not found screen', style: CustomTextStyle.subtitle
                   ),
 
                 ),

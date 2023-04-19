@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 class Keywords extends StatelessWidget {
   final List<String> keywordsList = [    'abstract', 'as', 'assert', 'async', 'await', 'break', 'case', 'catch',    'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do',    'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external',    'factory', 'false', 'final', 'finally', 'for', 'function', 'get', 'hide',    'implements', 'import', 'in', 'interface', 'is', 'library', 'mixin',    'new', 'null', 'on', 'operator', 'part', 'rethrow', 'return', 'set',    'show', 'static', 'super', 'switch', 'sync', 'this', 'throw', 'true',    'try', 'typedef', 'var', 'void', 'while', 'with', 'yield'  ];
@@ -11,8 +12,8 @@ class Keywords extends StatelessWidget {
         title: Text('Keywords'),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
+        child: CustomPadding(
+          paddingValue: 16.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,7 +46,7 @@ class Keywords extends StatelessWidget {
                 children: keywordsList
                     .map((keyword) => Text(
                   keyword,
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 16,fontWeight: FontWeight.normal, color: Colors.blueGrey),
                 ))
                     .toList(),
               ),

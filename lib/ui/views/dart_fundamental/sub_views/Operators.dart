@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class Operators extends StatelessWidget {
   @override
@@ -17,9 +18,9 @@ class Operators extends StatelessWidget {
           child:  ListTile(
 
             title: Text(
-              '\n operators', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+              '\n operators', style: CustomTextStyle.title,
             ),
-            subtitle: Text('\n Dart has operators similar to other programming languages like \"&&\", \"]]\", etc.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+            subtitle: Text('\n Dart has operators similar to other programming languages like \"&&\", \"]]\", etc.', style: CustomTextStyle.subtitle,
 
             ),
 

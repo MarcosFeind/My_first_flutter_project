@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class AndroidDeployment extends StatelessWidget {
   @override
@@ -20,9 +21,9 @@ class AndroidDeployment extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Android Deployment', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Android Deployment', style: CustomTextStyle.title
                   ),
-                  subtitle: Text('\n Content will be updated soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n Content will be updated soon.', style : CustomTextStyle.subtitle,
 
                   ),
 

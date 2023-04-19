@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 
 class BestPractices extends StatelessWidget {
@@ -56,19 +57,11 @@ class CustomHeadingWidgets {
     return ListTile(
       title: Text(
         title,
-        style: TextStyle(
-          fontSize: 16,
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
+        style: CustomTextStyle.darkheading,
       ),
       subtitle: Text(
         '\n$subtitle\n',
-        style: TextStyle(
-          fontSize: 16,
-          color: Colors.blueGrey,
-          fontWeight: FontWeight.normal,
-        ),
+        style: CustomTextStyle.subtitle,
       ),
     );
   }

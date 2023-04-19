@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/routes/route_name.dart';
 import 'package:my_first_project/ui/components/custom_listtile_widget.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 class NativeDeviceFeatures extends StatelessWidget {
   final List<Map<String, dynamic>> _features = [
@@ -44,8 +45,8 @@ class NativeDeviceFeatures extends StatelessWidget {
         child: Column(
           children: [
             for (var feature in _features)
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              CustomPadding(
+                paddingValue: 8.0,
                 child: InkWell(
                   onTap: () => Navigator.pushNamed(context, feature['route']),
                   child: Container(

@@ -1,46 +1,38 @@
 import 'package:flutter/material.dart';
+import '../../../../components/custom_dialog.dart';
 
 class SimpleDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Simple Dialog'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Show Dialog'),
-          onPressed: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return SimpleDialog(
-                  title: Text('Select an option'),
-                  children: <Widget>[
-                    SimpleDialogOption(
-                      onPressed: () {
-                        Navigator.pop(context, 'Option 1');
-                      },
-                      child: Text('Option 1'),
-                    ),
-                    SimpleDialogOption(
-                      onPressed: () {
-                        Navigator.pop(context, 'Option 2');
-                      },
-                      child: Text('Option 2'),
-                    ),
-                    SimpleDialogOption(
-                      onPressed: () {
-                        Navigator.pop(context, 'Option 3');
-                      },
-                      child: Text('Option 3'),
-                    ),
-                  ],
-                );
-              },
-            );
-          },
-        ),
+    return Center(
+      child: TextButton(
+        child: Text('Show Dialog'),
+        onPressed: () {
+          DialogWidget.showSimpleDialog(
+            context,
+            'Select an option',
+            <Widget>[
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, 'Option 1');
+                },
+                child: Text('Option 1'),
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, 'Option 2');
+                },
+                child: Text('Option 2'),
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, 'Option 3');
+                },
+                child: Text('Option 3'),
+              ),
+            ],
+          );
+        },
       ),
     );
   }

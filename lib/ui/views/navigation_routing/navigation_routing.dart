@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 import '../../../core/routes/route_name.dart';
 
@@ -12,8 +13,8 @@ class NavigationAndRouting extends StatelessWidget {
     required String title,
     required String subtitle,
   }) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return CustomPadding(
+      paddingValue: 8.0,
       child: InkWell(
         onTap: () => Navigator.pushNamed(context, routeName),
         child: Container(

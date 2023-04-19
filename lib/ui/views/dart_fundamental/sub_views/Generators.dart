@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class Generators extends StatelessWidget {
   @override
@@ -19,9 +20,9 @@ class Generators extends StatelessWidget {
               ListTile(
 
                 title: Text(
-                  '\n Generators', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                  '\n Generators', style: CustomTextStyle.title
                 ),
-                subtitle: Text('\n When you need to lazily produce a sequence of values, consider using a generator function.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                subtitle: Text('\n When you need to lazily produce a sequence of values, consider using a generator function.', style : CustomTextStyle.subtitle,
 
                 ),
 
@@ -30,9 +31,9 @@ class Generators extends StatelessWidget {
               ListTile(
 
                 title: Text(
-                  '\n Dart has built-in support for two kinds of generators functions', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
+                  '\n Dart has built-in support for two kinds of generators functions', style: CustomTextStyle.title,
                 ),
-                subtitle: Text('\n Synchronous generator. Returns an Iterable object. \n Asynchronous generator. Returns an Iterable object.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                subtitle: Text('\n Synchronous generator. Returns an Iterable object. \n Asynchronous generator. Returns an Iterable object.', style: CustomTextStyle.subtitle,
 
                 ),
 

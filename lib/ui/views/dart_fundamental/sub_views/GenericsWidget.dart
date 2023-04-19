@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class GenericsWidget extends StatelessWidget {
   @override
@@ -17,9 +18,9 @@ class GenericsWidget extends StatelessWidget {
           child:  ListTile(
 
             title: Text(
-              '\n Generics', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+              '\n Generics', style: CustomTextStyle.title,
             ),
-            subtitle: Text('\n Generics are often required for type safety, but they have more benefits than just allowing your code to run.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+            subtitle: Text('\n Generics are often required for type safety, but they have more benefits than just allowing your code to run.', style : CustomTextStyle.subtitle
 
             ),
 

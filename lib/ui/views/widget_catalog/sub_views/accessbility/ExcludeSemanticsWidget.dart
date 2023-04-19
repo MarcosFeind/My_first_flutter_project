@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class ExcludeSemanticsWidget extends StatelessWidget {
   @override
@@ -8,18 +9,20 @@ class ExcludeSemanticsWidget extends StatelessWidget {
         title: Text('ExcludeSemantics'),
       ),
 
-    body: Column(
-      children: [
-        ExcludeSemantics(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/laptop.jpg'),
+      body: Column(
+        children: [
+          ExcludeSemantics(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('assets/images/laptop.jpg'),
+            ),
           ),
-        ),
-        Text('A picture of a laptop.', style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black, fontSize: 20), ),
-      ],
-    ),
+          Text(
+            'A picture of a laptop.',
+            style:  CustomTextStyle.laptopTextStyle,
+          ),
+        ],
+      ),
     );
-
   }
 }

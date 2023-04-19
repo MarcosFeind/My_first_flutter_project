@@ -3,6 +3,8 @@ import 'package:my_first_project/core/routes/routes.dart';
 import 'ui/slidebar.dart.';
 import 'ui/splash_screen.dart';
 import 'core/routes/route_name.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,19 +16,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       initialRoute: RouteName.home,
       onGenerateRoute: Routes.generateRoute,
 
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: TextTheme(
-        headline1: TextStyle(fontWeight: FontWeight.w500, color: Colors.yellow,fontSize: 20),
-    subtitle1: TextStyle(fontWeight: FontWeight.w500, color: Colors.yellow,fontSize: 13),
-    )
-    ),
-    home: SplashScreen(),
+          headline1: CustomTextStyle.headline1,
+          subtitle1: CustomTextStyle.subtitle1,
+        ),
+      ),
+      home: SplashScreen(),
     );
   }
 }
@@ -51,8 +53,8 @@ class HomeScreen extends StatelessWidget {
   ];
 
   Widget _buildTopicCard(BuildContext context, String title, String route) {
-    return Padding(
-      padding: const EdgeInsets.all(2),
+    return CustomPadding(
+      paddingValue: 2,
       child: Card(
         elevation: 11,
         shadowColor: Colors.redAccent,
@@ -90,11 +92,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           '\t \t Flutter Basics',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
+          style: CustomTextStyle.white,
         ),
       ),
       body: GridView.count(

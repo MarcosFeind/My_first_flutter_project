@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class CascadeNotation extends StatelessWidget {
   @override
@@ -17,9 +18,9 @@ class CascadeNotation extends StatelessWidget {
           child:  ListTile(
 
             title: Text(
-              '\n Cascade Notation', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+              '\n Cascade Notation', style: CustomTextStyle.title,
             ),
-            subtitle: Text('\n Use\"..\" double dot notation on an object to access it\'s methods in chain.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+            subtitle: Text('\n Use\"..\" double dot notation on an object to access it\'s methods in chain.', style : CustomTextStyle.subtitle,
 
             ),
 

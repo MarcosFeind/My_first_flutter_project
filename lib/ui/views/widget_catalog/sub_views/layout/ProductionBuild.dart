@@ -1,151 +1,86 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_first_project/ui/views/production_build_deployment/production_build1.dart';
-import 'package:my_first_project/ui/views/production_build_deployment/AndroidDeployment.dart';
-import 'package:my_first_project/ui/views/production_build_deployment/AppstoreDeployment.dart';
-import 'package:my_first_project/ui/views/production_build_deployment/WebDeployment.dart';
+
+import '../../../../../core/routes/route_name.dart';
+
+
+import 'package:my_first_project/ui/design_system/base/padding.dart';
+
 class ProductionBuild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Production build and Deployment'),
+        title: Text('Production build and deployment'),
       ),
-
       body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            _buildAccessibilityWidget(
+              context,
+              'Production build',
+              'Generating a lean performance optimized build for deployment.',
+              RouteName.productionBuild,
+              height: 150,
+            ),
+            _buildAccessibilityWidget(
+              context,
+              'Android deployment',
+              'Putting the application on the android market.',
+              RouteName.androidDeployment,
+              height: 75,
+            ),
+            _buildAccessibilityWidget(
+              context,
+              'Appstore deployment',
+              'Putting the application on the ios market.',
+              RouteName.iosDeployment,
+              height: 130,
+            ),
 
-              children: [Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => ProductionBuild1()),);},
+            _buildAccessibilityWidget(
+              context,
+              'web deployment',
+              'Putting the application on web servers..',
+              RouteName.webDeployment,
+              height: 130,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(11),
-                        color: Colors.red
-                    ),
-                    width: double.infinity,
-                    height: 100,
-                    child: ListTile(
-
-                        title: Text('Production build', style: Theme
-                            .of(context)
-                            .textTheme
-                            .headline1),
-                        subtitle: Text(
-                            '\n Generating a lean performance optimized build for deployment.',
-                            style: Theme
-                                .of(context)
-                                .textTheme
-                                .subtitle1)
-                    ),
-
-                  ),
-                ),
-              ),
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AndroidDeployment()),);},
-
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(11),
-                          color: Colors.red
-                      ),
-                      width: double.infinity,
-                      height: 75,
-                      child: ListTile(
-
-                          title: Text(
-                              'Android deployemnt',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .headline1),
-                          subtitle: Text(
-                              '\n Putting the application on the android market.',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .subtitle1)
-                      ),
-
-                    ),
-                  ),
-                ),
-
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AppstoreDeployment()),);},
-
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(11),
-                          color: Colors.red
-                      ),
-                      width: double.infinity,
-                      height: 75,
-                      child: ListTile(
-
-                          title: Text(
-                              'Appstore deployment',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .headline1),
-                          subtitle: Text(
-                              '\n Putting the application on the ios market.',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .subtitle1)
-                      ),
-
-                    ),
-                  ),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                    onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => WebDeployment()),);},
-
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(11),
-                          color: Colors.red
-                      ),
-                      width: double.infinity,
-                      height: 75,
-                      child: ListTile(
-
-                          title: Text(
-                              'Web deployment',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .headline1),
-                          subtitle: Text(
-                              '\n Putting the application on web servers.',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .subtitle1)
-                      ),
-
-                    ),
-                  ),
-                ),
-                
-              ]
-
-          )
+  Widget _buildAccessibilityWidget(
+      BuildContext context,
+      String title,
+      String subtitle,
+      String routeName, {
+        double height = 75,
+      }) {
+    return CustomPadding(
+      paddingValue: 8.0,
+      child: InkWell(
+        onTap: () => Navigator.pushNamed(context, routeName),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(11),
+            color: Colors.red,
+          ),
+          width: double.infinity,
+          height: height,
+          child: ListTile(
+            title: Text(
+              title,
+              style: Theme.of(context).textTheme.headline1,
+            ),
+            subtitle: Text(
+              '\n $subtitle',
+              style: Theme.of(context).textTheme.subtitle1,
+            ),
+          ),
+        ),
       ),
     );
   }

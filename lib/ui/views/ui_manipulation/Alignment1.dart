@@ -19,11 +19,11 @@ class Alignment1 extends StatelessWidget {
               ListTile(
                 title: Text(
                   '\n Using parent "Container" widget',
-                  style: MyTextStyle.title,
+                  style: CustomTextStyle.title,
                 ),
                 subtitle: Text(
                   '\n "Container" widget has a named parameter "alignment" which takes a value made available using "alignment" enum. \n ',
-                  style: MyTextStyle.subtitle,
+                  style: CustomTextStyle.subtitle,
                 ),
               ),
               Padding(
@@ -35,7 +35,7 @@ class Alignment1 extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Centered Text',
-                      style: MyTextStyle.body,
+                      style: CustomTextStyle.body,
                     ),
                   ),
                 ),
@@ -50,7 +50,7 @@ class Alignment1 extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Center Left Text',
-                      style: MyTextStyle.body,
+                      style: CustomTextStyle.body,
                     ),
                   ),
                 ),
@@ -65,7 +65,7 @@ class Alignment1 extends StatelessWidget {
                     alignment: Alignment.bottomRight,
                     child: Text(
                       'Bottom Right Text',
-                      style: MyTextStyle.body,
+                      style: CustomTextStyle.body,
                     ),
                   ),
                 ),
@@ -73,11 +73,11 @@ class Alignment1 extends StatelessWidget {
               ListTile(
                 title: Text(
                   '\n Individual child alignment using \'Align\' widget',
-                  style: MyTextStyle.title,
+                  style: CustomTextStyle.title,
                 ),
                 subtitle: Text(
                   '\n "Align" widget uses a named parameter "alignment", which takes a value made available using "Alignment" enum. \n',
-                  style: MyTextStyle.subtitle,
+                  style: CustomTextStyle.subtitle,
                 ),
               ),
               Padding(
@@ -96,7 +96,7 @@ class Alignment1 extends StatelessWidget {
                         color: Colors.red,
                         child: Text(
                           'Top Right Text',
-                          style: MyTextStyle.body,
+                          style: CustomTextStyle.body,
                         ),
                       ),
                     ),

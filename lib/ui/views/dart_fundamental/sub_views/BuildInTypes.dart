@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class BuildInTypes extends StatelessWidget {
   const BuildInTypes({Key? key}) : super(key: key);
@@ -11,8 +13,8 @@ class BuildInTypes extends StatelessWidget {
         title: const Text('Built-in Types'),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
+        child: CustomPadding(
+          paddingValue: 16.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -80,11 +82,7 @@ class BuildInTypes extends StatelessWidget {
   Widget _buildTypeDescription(String type) {
     return Text(
       '\n $type',
-      style: const TextStyle(
-        fontSize: 16,
-        color: Colors.blueGrey,
-        fontWeight: FontWeight.normal,
-      ),
+      style:CustomTextStyle.subtitle
     );
   }
 }

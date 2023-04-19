@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 import '../../../core/routes/route_name.dart';
 
@@ -9,8 +10,8 @@ class UIManipulation extends StatelessWidget {
   Widget _buildMenuItem(BuildContext context, String title, String subtitle, String routeName) {
     return InkWell(
       onTap: () => Navigator.pushNamed(context, routeName),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+      child: CustomPadding(
+        paddingValue: 8.0,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(11),

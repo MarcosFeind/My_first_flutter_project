@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class DeclarativeApproach extends StatelessWidget{
   @override
@@ -13,8 +13,8 @@ class DeclarativeApproach extends StatelessWidget{
         color: Colors.white70,
         height: 200,
         child: ListTile(
-          title: Text('\n Declarative routing', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),  ),
-          subtitle: Text('\n Content will be updated soon.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+          title: Text('\n Declarative routing', style: CustomTextStyle.title ),
+          subtitle: Text('\n Content will be updated soon.',style: CustomTextStyle.subtitle,
 
           ),
 

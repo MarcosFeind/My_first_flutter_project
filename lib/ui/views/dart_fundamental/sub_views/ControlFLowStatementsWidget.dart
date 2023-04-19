@@ -16,61 +16,61 @@ class ControlFlowStatementsWidget extends StatelessWidget {
             ListTile(
               title: Text(
                 '\n if-else',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n For Conditional logic. \n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
             ListTile(
               title: Text(
                 '\n For Loops',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
             ListTile(
               title: Text(
                 '\n While and do-while loops',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
             ListTile(
               title: Text(
                 '\n break and continue',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
             ListTile(
               title: Text(
                 '\n switch and case',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
             ListTile(
               title: Text(
                 '\n assert',
-                style: CustomTextStyle.heading,
+                style: CustomTextStyle.title,
               ),
               subtitle: Text(
                 '\n Similar to other programming languages.',
-                style: CustomTextStyle.subheading,
+                style: CustomTextStyle.subtitle,
               ),
             ),
           ],

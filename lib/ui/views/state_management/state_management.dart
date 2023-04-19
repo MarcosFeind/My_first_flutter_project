@@ -18,21 +18,21 @@ class StateManagement extends StatelessWidget {
       children: [
       _buildListTile(
       context: context,
-      routeName: RouteName.importantConcepts,
+      routeName: RouteName.state_management_basics,
       title: 'State management basics and stateful widgets',
       subtitle: 'Managing state using stateful widgets',
       ),
 
     _buildListTile(
     context: context,
-    routeName: RouteName.importantConcepts,
+    routeName: RouteName.providerStateManagement,
     title: '\"Provider\" package for state management',
     subtitle: 'Basics of state management using provider (officially supported)',
     ),
 
     _buildListTile(
     context: context,
-    routeName: RouteName.importantConcepts,
+    routeName: RouteName.state_management_todos_example,
     title: 'Todos application example',
     subtitle: 'Implementation of a simple todo application.',
     ),

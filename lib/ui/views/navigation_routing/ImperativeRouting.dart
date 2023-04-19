@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/ui/design_system/base/textstyle.dart';
 
 class ImperativeRouting extends StatelessWidget {
   @override
@@ -20,20 +21,9 @@ class ImperativeRouting extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Navigator', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Navigator', style: CustomTextStyle.title
                   ),
-                  subtitle: Text('\n A widget that manages a set of child widgets with a stack discipline.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
-
-                  ),
-
-                ),
-
-                ListTile(
-
-                  title: Text(
-                    '\n Displaying a Full-screen route', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('\n Although you can create a navigator directly, it\'s most common to use the navigator created by the Router which itself is created and configured by a WidgetsApp or a MaterialApp Widget. You can refer to that navigator with Navigator.of.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n A widget that manages a set of child widgets with a stack discipline.', style: CustomTextStyle.subtitle
 
                   ),
 
@@ -42,9 +32,20 @@ class ImperativeRouting extends StatelessWidget {
                 ListTile(
 
                   title: Text(
-                    '\n Navigator', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+                    '\n Displaying a Full-screen route', style: CustomTextStyle.title
                   ),
-                  subtitle: Text('\n A widget that manages a set of child widgets with a stack discipline.', style : TextStyle (fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.normal),
+                  subtitle: Text('\n Although you can create a navigator directly, it\'s most common to use the navigator created by the Router which itself is created and configured by a WidgetsApp or a MaterialApp Widget. You can refer to that navigator with Navigator.of.',style: CustomTextStyle.subtitle
+
+                  ),
+
+                ),
+
+                ListTile(
+
+                  title: Text(
+                    '\n Navigator', style: CustomTextStyle.title
+                  ),
+                  subtitle: Text('\n A widget that manages a set of child widgets with a stack discipline.', style: CustomTextStyle.subtitle
 
                   ),
 

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/routes/route_name.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
+
 
 class FlutterFundamentals extends StatelessWidget {
   const FlutterFundamentals({Key? key}) : super(key: key);
@@ -16,8 +18,8 @@ class FlutterFundamentals extends StatelessWidget {
           ),
         );
       },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+      child: CustomPadding(
+        paddingValue: 8.0,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(11),

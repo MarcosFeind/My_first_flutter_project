@@ -15,14 +15,15 @@ class ClassesWidget extends StatelessWidget {
     height: Constants.containerHeight,
     color: Constants.containerColor,
     child:CustomPadding(
+        paddingValue: 2.0,
         child: ListTile(
           title: Text(
             '\n Classes',
-            style: CustomTextStyle.heading,
+            style: CustomTextStyle.title,
           ),
           subtitle: Text(
             '\n Dart ia an object-oriented language with classes and mixin-based inheritance. Every object is an instance of a class , and all classes except Null descend form object. Mixin-based inheritance means that although every class (except for the top class, object?) has exactly one superclass, a class body acn be reused in multiple class hierarchies. Extension methods are a way to add functionality to a class without changing the class or creating a subclass.',
-            style: CustomTextStyle.subheading,
+            style: CustomTextStyle.subtitle,
           ),
         ),
       ),

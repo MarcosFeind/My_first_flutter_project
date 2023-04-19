@@ -14,11 +14,11 @@ class CallableClasses extends StatelessWidget {
         child: ListTile(
           title: Text(
             '\n Callable Classes',
-            style: CustomTextStyle.heading,
+            style: CustomTextStyle.title,
           ),
           subtitle: Text(
             '\n To allow an instance of your Dart class to be called like a function, implement the call() method.',
-            style: CustomTextStyle.subheading,
+            style: CustomTextStyle.subtitle,
           ),
         ),
       ),

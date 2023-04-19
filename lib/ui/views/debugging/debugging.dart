@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_project/ui/components/custom_listtile_widget.dart';
+import 'package:my_first_project/ui/design_system/base/padding.dart';
 
 import '../../../core/routes/route_name.dart';
 
@@ -17,8 +18,8 @@ class Debugging extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            CustomPadding(
+              paddingValue: 8.0,
               child: ListTileWidget(
                 onTap: () {
                   Navigator.pushNamed(context, RouteName.pageNotFound);
@@ -43,8 +44,8 @@ class Debugging extends StatelessWidget {
                 context: context,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            CustomPadding(
+              paddingValue: 8.0,
               child: ListTileWidget(
                 onTap: () {
                   Navigator.pushNamed(context, RouteName.pageNotFound);
