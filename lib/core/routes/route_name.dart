@@ -489,4 +489,6 @@ class RouteName {
   static const String providerStateManagement = '/state-management/provider';
   static const String state_management_todos_example =
       '/state-management/todos-example';
+  static const String state_management_todos_bloc_example =
+      '/state-management/todos-bloc_example';
 }

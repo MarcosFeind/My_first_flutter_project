@@ -1,7 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_project/core/blocs/todo_state.dart';
 import 'package:my_first_project/core/routes/route_name.dart';
+import 'package:my_first_project/data/repositories/todo_repository.dart';
 import 'package:my_first_project/main.dart';
 import 'package:my_first_project/ui/views/dart_fundamental/dart_fundamental.dart';
 import 'package:my_first_project/ui/views/dart_fundamental/sub_views/AsynchronySupport.dart';
@@ -79,6 +81,9 @@ import '../../ui/views/production_build_deployment/AppstoreDeployment.dart';
 import '../../ui/views/state_management/ProviderPackage.dart';
 import '../../ui/views/state_management/StateManagementBasics.dart';
 import '../../ui/views/state_management/TodoApplication.dart';
+import '../../ui/views/state_management/todo_bloc/main_todo.dart';
+import '../../ui/views/state_management/todo_bloc/todo_screen.dart';
+import '../../ui/views/supporting_classes_enums/SupportingClass1.dart';
 import '../../ui/views/supporting_classes_enums/SupportingEnum.dart';
 import '../../ui/views/testing/UnitTesting.dart';
 import '../../ui/views/ui_manipulation/AdaptiveLayout.dart';
@@ -250,11 +255,6 @@ import '../../ui/views/widget_catalog/sub_views/styling/StylingWidgets.dart';
 import '../../ui/views/widget_catalog/sub_views/text/DefaultTextStyleWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/RichTextWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/TextWIdget.dart';
-import '../models/todo_list.dart';
-import '../providers/todo_providers.dart';
-
-
-
 
 
 class Routes {
@@ -372,7 +372,7 @@ class Routes {
         );
       case RouteName.classes:
         return MaterialPageRoute(
-          builder: (context) => SupportingClasses(),
+          builder: (context) => SupportingClass1(),
         );
       case RouteName.generics:
         return MaterialPageRoute(
@@ -442,7 +442,7 @@ class Routes {
     // supporting classes and enums subcontextviews
       case RouteName.supportingClasses:
         return MaterialPageRoute(
-          builder: (context) => SupportingClasses(),
+          builder: (context) => SupportingClass1(),
         );
       case RouteName.supportingEnums:
         return MaterialPageRoute(
@@ -1466,7 +1466,12 @@ class Routes {
         );
       case RouteName.state_management_todos_example:
         return MaterialPageRoute(
-          builder: (context) => Error404(),
+          builder: (context) => TodoApplication(),
+        );
+
+      case RouteName.state_management_todos_bloc_example:
+        return MaterialPageRoute(
+          builder: (context) => TodoList(todosRepository: TodosRepository(),),
         );
 
       default:

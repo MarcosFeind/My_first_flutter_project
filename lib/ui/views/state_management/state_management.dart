@@ -37,8 +37,15 @@ class StateManagement extends StatelessWidget {
     subtitle: 'Implementation of a simple todo application.',
     ),
 
+        _buildListTile(
+          context: context,
+          routeName: RouteName.state_management_todos_bloc_example,
+          title: 'Todos application using Bloc Pattern',
+          subtitle: 'Implementation of a simple todo application using Bloc Pattern.',
+        ),
 
-          ],
+
+      ],
         ),
       ),
     );
