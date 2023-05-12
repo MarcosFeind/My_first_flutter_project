@@ -1,7 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_first_project/core/blocs/todo_state.dart';
 import 'package:my_first_project/core/routes/route_name.dart';
 import 'package:my_first_project/data/repositories/todo_repository.dart';
 import 'package:my_first_project/main.dart';
@@ -82,7 +81,6 @@ import '../../ui/views/state_management/ProviderPackage.dart';
 import '../../ui/views/state_management/StateManagementBasics.dart';
 import '../../ui/views/state_management/TodoApplication.dart';
 import '../../ui/views/state_management/todo_bloc/main_todo.dart';
-import '../../ui/views/state_management/todo_bloc/todo_screen.dart';
 import '../../ui/views/supporting_classes_enums/SupportingClass1.dart';
 import '../../ui/views/supporting_classes_enums/SupportingEnum.dart';
 import '../../ui/views/testing/UnitTesting.dart';
@@ -255,6 +253,7 @@ import '../../ui/views/widget_catalog/sub_views/styling/StylingWidgets.dart';
 import '../../ui/views/widget_catalog/sub_views/text/DefaultTextStyleWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/RichTextWidget.dart';
 import '../../ui/views/widget_catalog/sub_views/text/TextWIdget.dart';
+import '../services/app_router.dart';
 
 
 class Routes {
@@ -1471,8 +1470,9 @@ class Routes {
 
       case RouteName.state_management_todos_bloc_example:
         return MaterialPageRoute(
-          builder: (context) => TodoList(todosRepository: TodosRepository(),),
+          builder: (context) =>TodoApp(appRouter: AppRouter(),),
         );
+
 
       default:
         return MaterialPageRoute(builder: (context) => Error404());
