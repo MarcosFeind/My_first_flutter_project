@@ -1,37 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
-import 'package:my_first_project/ui/views/state_management/todo_bloc/todo_screen.dart';
+import '../../../../core/blocs/bloc_exports.dart';
+import '../../../../core/screens/tabs_screen.dart';
+import '../../../../core/services/app_router.dart';
+import '../../../../core/services/app_theme.dart';
 
-import '../../../../data/repositories/todo_repository.dart';
-import 'package:my_first_project/core/blocs/todo_bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() {
-  final TodosRepository todosRepository = TodosRepository();
-  runApp(TodoApp(todosRepository: todosRepository));
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final storage = await HydratedStorage.build(
+      storageDirectory: await getApplicationDocumentsDirectory());
+  HydratedBlocOverrides.runZoned(
+        () => runApp(TodoApp(
+      appRouter: AppRouter(),
+    )),
+    storage: storage,
+  );
 }
 
 class TodoApp extends StatelessWidget {
-  final TodosRepository todosRepository;
+  const TodoApp({Key? key, required this.appRouter}) : super(key: key);
+  final AppRouter appRouter;
 
-  TodoApp({required this.todosRepository});
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => TasksBloc(),
         ),
-        body: TodoList(todosRepository: todosRepository),
+        BlocProvider(
+          create: (context) => SwitchBloc(),
+        ),
+      ],
+      child: BlocBuilder<SwitchBloc, SwitchState>(
+        builder: (context, state) {
+          return MaterialApp(
+
+            title: 'Flutter Tasks App',
+            theme: state.switchValue
+                ? AppThemes.appThemeData[AppTheme.darkTheme]
+                : AppThemes.appThemeData[AppTheme.lightTheme],
+            home: TabsScreen(),
+            onGenerateRoute: appRouter.onGenerateRoute,
+          );
+        },
       ),
     );
   }
